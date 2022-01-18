@@ -1,1 +1,1 @@
-# johnson-survival-analysis
+# johnson_survival-analysis
