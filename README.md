@@ -15,3 +15,6 @@ This is a repository to store the code for survival analysis that we do here in 
 - Automated R script with specific naming convention.
 - csv file for naming convention.
 - Adaptation for different studies carried out in the lab. 
+
+
+Test for Macbook Pro
