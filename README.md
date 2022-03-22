@@ -8,6 +8,7 @@ This is a repository to store the code for survival analysis that we do here in 
 
 - Version control with GitHub.
 - Template for survival analysis with Cox mixed effects model in R.
+- Template for project management of survival analysis in R.
 
 ## Currently in development
 - Walkthrough guide.
