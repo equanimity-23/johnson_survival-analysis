@@ -1,6 +1,6 @@
 # Johnson Lab Drosophila Survival Analysis
 
-[![Current Version](https://img.shields.io/badge/tag-v1.0.2-blue)](https://github.com/equanimity-23/johnson_survival-analysis/tags)
+[![Current Version](https://img.shields.io/badge/tag-v1.1.0-blue)](https://github.com/equanimity-23/johnson_survival-analysis/tags)
 
 This is a repository to store the code for survival analysis that we do here in the Johnson Lab. It is based on the Cox mixed effects model developed by Terry M. Therneau and has been adapted to suit our needs.
 
