@@ -6,7 +6,7 @@ library(survminer)
 
 # Rename the data files, replace placeholder with csv file name ----
 
-DCV <- placeholder
+DCV <- example_data
 
 # Filter out the PBS samples to stop them from confounding the analysis ----
 
@@ -44,7 +44,7 @@ ggsurvplot(miRNAcurves,
            data = DCV_noPBS,               #change to the virus under analysis
            axes.offset = FALSE,            #changes axes to start at zero
            line = c(1,1),
-           pval = placeholder,             #change to coxme pvalue
+           pval = 0.19,             #change to coxme pvalue
            xlab = "Time in days",
            ylab = "Proportional survival",
            break.time.by = 1, 
@@ -54,3 +54,6 @@ ggsurvplot(miRNAcurves,
            legend.labs = 
              c("w1118", "miR- KO")         #change the legends to the miRNA
 )
+
+# Save survival plot ----
+ggsave(here("plots", "example.png"))
