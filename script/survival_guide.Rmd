@@ -1,0 +1,59 @@
+---
+title: "Survival analysis guide - WIP"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1) Introduction
+
+-   Introduction to Cox mixed effects model
+-   Why do we use it in the lab?
+
+## 2) Script 1 - *requirements.R*
+
+Installation of the required packages should only be done once, or whenever R is updated on your local computer. Be sure to have the most recent source code, available on Github.
+
+### 2.1) Installing packages
+
+    install.packages("dplyr")
+    install.packages("coxme")
+    install.packages("survminer")
+    install.packages("here")
+
+Once the packages have been installed, move on to the second R script.
+
+## 3) Script 2 - *survival-analysis_script.R*
+
+This is the script where the bulk of the analysis takes place. Generally, the script will assume that you are starting in a fresh R session and will initialise the required packages that were installed using the _requirements.R_ script. 
+
+### 3.1) Load installed packages
+
+```
+library(dplyr)
+library(coxme)
+library(survminer)
+library(here)
+```
+The _dplyr_ package allows for efficient data wrangling.
+
+The _coxme_ package is required to run the data through the Cox mixed effects model.
+
+The _survminer_ package is required to build survival curves from the input data. 
+
+The _here_ package allows for efficient file mangement, across different OS platforms and directories. 
+
+
+
+
+### Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
