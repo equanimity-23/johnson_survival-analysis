@@ -4,9 +4,14 @@ library(dplyr)
 library(coxme)
 library(survminer)
 
-# Rename the data files, replace placeholder with csv file name ----
+# Load and rename the data files, replace placeholder with csv file name ----
 
-DCV <- example_data
+DCV <- read.csv(here("data", "example_data.csv"))
+
+# Make sure variables are coded as factors
+
+DCV$Mutant <- factor(DCV$Mutant)
+DCV$Virus <- factor(DCV$Virus)
 
 # Filter out the PBS samples to stop them from confounding the analysis ----
 
@@ -34,7 +39,7 @@ fitDCV <- coxme(Surv(Days, Survival)~ Mutant + (1|BiolRep/TechRep),
 fitDCV
 
 # Export coxme output ----
-sink("miR-_Virus_coxme.txt") # add miRNA name and virus | creates the txt file in WD
+sink(here("output","example_coxme.txt")) # add miRNA name and virus | creates the txt file in WD
 print(fitDCV) # prints coxme output to txt file
 sink() # closes the connection **CRITICAL**
 
