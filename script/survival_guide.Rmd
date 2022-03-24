@@ -43,7 +43,7 @@ The _coxme_ package is required to run the data through the Cox mixed effects mo
 
 The _survminer_ package is required to build survival curves from the input data. 
 
-The _here_ package allows for efficient file mangement, across different OS platforms and directories. 
+The _here_ package allows for efficient file management, across different OS platforms and directories. 
 
 
 
