@@ -14,4 +14,8 @@ cox.zph(cox.lung)
 wei.lung <- survreg(Surv(time, status) ~ ph.ecog + sex + age, data = lung, dist = 'weibull')
 summary(wei.lung)
 
+## Exponential distribution
+expo.lung <- survreg(Surv(time, status) ~ ph.ecog + sex + age, data = lung, dist = 'exponential')
+summary(expo.lung)
 
+anova(wei.lung, expo.lung)
